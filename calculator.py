@@ -2,7 +2,7 @@ from tkinter import *
 import math
 
 window = Tk()
-window.geometry("340x440")
+window.geometry("340x410")
 window.resizable(0,0)
 window.title("calculator")
 
@@ -33,7 +33,6 @@ def btnclick(item):
         equation = equation.join(expression)
         print(equation)
    
-# i ltierally have no idea how to backspace so only clearing
 def clear():
     global expression
     global displaystr
@@ -117,8 +116,7 @@ def solve():
     expression = str(answer)
     operators.clear()
     nums.clear()
-    
-            
+                
 display = Frame(window, width = 340, height = 70, bd = 0, highlightbackground = "black", highlightthickness = 1,)
 display.pack(side = TOP)
 
@@ -126,7 +124,7 @@ input_field = Label(display, font = ('arial',16,'bold'), textvariable = displays
 input_field.grid(row = 0, column = 0)
 input_field.pack(ipady = 10)
 
-btns = Frame(window, width = 340, height = 370, bg = "#ccc")
+btns = Frame(window, width = 340, height = 340, bg = "#ccc")
 btns.pack()
 
 # numbers
@@ -152,7 +150,6 @@ button0 = Button(btns, text = "0", height = 4, width = 8, command = lambda: btnc
 button0.grid(row = 3, column = 0, padx = 1, pady = 1)
 buttonpi = Button(btns, text = "π", height = 4, width = 8, command = lambda: btnclick("pi"))
 buttonpi.grid(row = 5, column = 0, padx = 1, pady = 1)
-
 
 # operators
 buttondiv = Button(btns, text = "/", height = 4, width = 8, command = lambda: setoperator("/"))
