@@ -19,7 +19,7 @@ def btnclick(item):
         return
     
     if item == "pi":
-        expression += str(math.pi)
+        expression = str(math.pi)
     else:
         expression += str(item)
         
